@@ -8,7 +8,7 @@ export const fileTree: Ifile = {
     {
       name: "public",
       isFolder: true,
-      children: [{ name: "momen.html", isFolder: false }],
+      children: [{ name: "momen", isFolder: true,children:[{name:"React.tsx",isFolder:false}] }],
     },
     { name: "index.ts", isFolder: false },
   ],
