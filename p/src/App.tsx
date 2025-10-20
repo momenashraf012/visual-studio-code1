@@ -4,13 +4,10 @@ import FillCom from "./componettes/FillCom";
 import { fileTree } from "./data/FileTree";
 
 function App() {
-  return (
-    <div>
-      {fileTree.children?.map((file,index) => (
-        <FillCom filename={file.name} key={index}/>
-      ))}
-    </div>
-  );
+  return <div className="m-4">
+
+    < FillCom fileTree={fileTree}/>
+  </div>;
 }
 
 export default App;
