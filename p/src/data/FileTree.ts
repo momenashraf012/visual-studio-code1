@@ -1,10 +1,10 @@
 import type { Ifile } from "../interface";
 
 export const fileTree: Ifile = {
-  name: "momen-ashraf",
+  name: "node_modules",
   isFolder: true,
   children: [
-    { name: "index.ts", isFolder: false },
+    { name: "index.js", isFolder: false },
     {
       name: "public",
       isFolder: true,

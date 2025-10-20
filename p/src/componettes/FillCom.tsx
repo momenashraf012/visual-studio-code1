@@ -1,9 +1,10 @@
 import type { Ifile } from "../interface";
-import FileIcon from "./SVG/File";
+
 import RightArrowIcon from "./SVG/Right";
-import FolderIcon from "./SVG/Folder";
+
 import BottomArrowIcon from "./SVG/Bottom";
 import { useState } from "react";
+import RenderfileIcon from "./RenderfileIcon";
 interface Iprops {
   fileTree: Ifile;
 }
@@ -19,12 +20,18 @@ const FillCom = ({ fileTree }: Iprops) => {
           <div className="flex items-center">
             {isOpen ? <BottomArrowIcon /> : <RightArrowIcon />}
 
-            <FolderIcon />
+            <RenderfileIcon filename={fileTree.name} isOpen={isOpen} isFolder={fileTree.isFolder} />
+                <span>{fileTree.name}</span>
           </div>
         ) : (
-          <FileIcon />
+          <div className="flex items-center gap-2">
+           <RenderfileIcon filename={fileTree.name} />
+              <span>{fileTree.name}</span>
+              
+            </div>
+        
         )}
-        <span>{fileTree.name}</span>
+    
       </div>
 
       { isOpen && fileTree.children?.map((file, index) => (
